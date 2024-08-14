@@ -1,0 +1,303 @@
+/* Basic styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5; /* Light grey background for a clean look */
+}
+
+.container {
+    background-color: #ffffff; /* White background */
+    padding: 30px; /* Increase padding for better spacing */
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.mlsa-logo {
+    max-width: 120px; /* Slightly larger logo */
+    margin: 0 auto 25px; /* Center the logo and add more space below */
+    display: block;
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: #333333; /* Dark grey for the heading */
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px; /* Increased margin for better spacing */
+    text-align: left;
+    color: #555555; /* Medium grey for labels */
+}
+
+input[type="text"],
+input[type="url"] {
+    width: 100%;
+    padding: 12px; /* Increase padding for better usability */
+    margin-top: 8px;
+    border: 1px solid #dddddd;
+    border-radius: 8px; /* Slightly more rounded corners */
+    font-size: 0.95rem; /* Slightly larger font size for inputs */
+    color: #333333; /* Dark grey for text */
+}
+
+input[type="text"]::placeholder,
+input[type="url"]::placeholder {
+    color: #888888; /* Light grey placeholder text */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0078D4; /* Microsoft blue for primary buttons */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    margin-top: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #005a9e; /* Darker blue on hover */
+}
+
+#result {
+    margin-top: 25px;
+    display: none;
+    text-align: left;
+    color: #333333; /* Dark grey for generated link */
+}
+
+#generated-link {
+    font-weight: bold;
+    word-break: break-all;
+    margin-bottom: 10px;
+}
+
+#copy-button {
+    padding: 8px 20px; /* Adjust padding for a balanced size */
+    background-color: #28a745; /* Professional green for the copy button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto 0; /* Center the button and add space above */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    transition: background-color 0.3s ease;
+}
+
+#copy-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Define the keyframes for the bounce animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  /* Apply the animation to the .mlsa-logo class */
+  .mlsa-logo {
+    animation: bounce 2s infinite;
+  }
+  
+
+
+/*Micorosoft*/
+.brutalist-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 169px;
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    border: 3px solid #fff;
+    outline: 3px solid #000;
+    box-shadow: 6px 6px 0 #00a4ef;
+    transition: all 0.1s ease-out;
+    padding: 0 15px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto; /* Center the button and add some margin */
+}
+  
+  .brutalist-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    );
+    z-index: 1;
+    transition: none;
+    /* Initially hide the pseudo-element */
+    opacity: 0;
+  }
+  
+  @keyframes slide {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  .brutalist-button:hover::before {
+    /* Show the pseudo-element on hover */
+    opacity: 1;
+    animation: slide 2s infinite;
+  }
+  
+  .brutalist-button:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0 #000;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  @keyframes slide {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
+  .brutalist-button:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0 #00a4ef;
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
+  }
+
+  .ms-logo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    width: 26px;
+    height: 26px;
+    margin-right: 8px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease-out;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .brutalist-button:hover .ms-logo {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  
+  .brutalist-button:active .ms-logo {
+    transform: rotate(10deg) scale(0.9);
+  }
+  
+  .ms-logo-square {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .ms-logo-square:nth-child(1) {
+    background-color: #f25022;
+  }
+  .ms-logo-square:nth-child(2) {
+    background-color: #7fba00;
+  }
+  .ms-logo-square:nth-child(3) {
+    background-color: #00a4ef;
+  }
+  .ms-logo-square:nth-child(4) {
+    background-color: #ffb900;
+  }
+  
+  .button-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    transition: transform 0.2s ease-out;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .brutalist-button:hover .button-text {
+    transform: skew(-5deg);
+  }
+  
+  .brutalist-button:active .button-text {
+    transform: skew(5deg);
+  }
+  
+  .button-text span:first-child {
+    font-size: 11px;
+    text-transform: uppercase;
+  }
+  
+  .button-text span:last-child {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+/* Error message styling */
+.error-message {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text */
+    border: 1px solid #f5c6cb; /* Border matching the background color */
+    padding: 12px; /* Padding for spacing */
+    border-radius: 8px; /* Rounded corners */
+    margin-top: 20px; /* Space above the message */
+    font-size: 0.95rem; /* Font size for readability */
+    text-align: left; /* Align text to the left */
+    display: none; /* Hidden by default */
+}
+
+.error-message.visible {
+    display: block; /* Show the error message when needed */
+}
+
+
+
+/* Responsive design */
+@media (min-width: 768px) {
+    .container {
+        max-width: 700px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 900px;
+    }
+}

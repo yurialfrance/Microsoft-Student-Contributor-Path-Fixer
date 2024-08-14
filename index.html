@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Student Contributor Path Fixer</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="https://scontent.fmnl3-2.fna.fbcdn.net/v/t39.30808-6/454367889_915125600632813_8988608152099054641_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeE8YsLm2dgoNpW8E5JE8rSX8Vzr7lwFIO7xXOvuXAUg7oWSG1DnAgV-KQVW3yW25R0TCCBSEd8IxYHDMwME2kfM&_nc_ohc=kVvDpsz5HjsQ7kNvgFK0hR6&_nc_zt=23&_nc_ht=scontent.fmnl3-2.fna&oh=00_AYB-Six1DJ1VWoksn8_Z2rcxuDbMA5Rq1tr3_E327yooEw&oe=66C2ABD2">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- MLSA Logo -->
+        <a href="https://mvp.microsoft.com/studentambassadors?wt.mc_id=?wt.mc_id=studentamb_403863" target="_blank">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/1*fMCdGCokXoh8CECCD7j9Og.png" alt="MLSA Logo" class="mlsa-logo">
+          </a>
+          
+
+        <h1>Microsoft Student Contributor Path Fixer</h1>
+
+        <a href="https://learn.microsoft.com/training/browse?wt.mc_id=studentamb_402119" target="_blank" class="brutalist-button">
+            <div class="ms-logo">
+                <div class="ms-logo-square"></div>
+                <div class="ms-logo-square"></div>
+                <div class="ms-logo-square"></div>
+                <div class="ms-logo-square"></div>
+            </div>
+            <div class="button-text">
+                <span>Learn at</span>
+                <span>Microsoft</span>
+            </div>
+        </a>
+
+        <!-- Error message container -->
+        <div id="error-message" class="error-message"></div>
+
+        <form id="contributor-form">
+            <label for="contributor-id">Contributor ID:</label>
+            <input type="text" id="contributor-id" placeholder="e.g., studentamb_######" required>
+            
+            <label for="original-link">Original Microsoft Link:</label>
+            <input type="url" id="original-link" placeholder="e.g., https://learn.microsoft.com" required>
+            
+            <button type="submit">Generate Fixed Link</button>
+        </form>
+        <div id="result">
+            <h2>Generated Link:</h2>
+            <p id="generated-link"></p>
+            <button id="copy-button">Copy</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
